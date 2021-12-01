@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        background-color: rgb(235, 181, 34); padding: 20px 40px; border-radius: 3px; margin-top: 10px; text-align: left; animation: fade 1s; 
+    }
+    @keyframes fade{
+        0%{
+            left: 1rem; opacity: 0%;
+        }
+        100%{
+            left: 0rem; opacity: 100%;
+        }
+    }
+
+
+
+    div.main{
+        background-color: rgba(235, 182, 34, 0.329); border-radius: 3px; 
+    }
+
+
+
+    h3,p{
+        padding: 20px;
+    }
+    p{
+        font-size: larger;
+    }
+    h3{
+        padding: 0px 20px; margin-bottom: 0px;
+    }
+
+
+
+    input[type="text"], input[type="email"], select{
+        width: 90%; padding: 1rem; background-color: white; border: 1px solid black;
+    }
+    input[type="submit"]{
+        padding: 7px; width: 15%; cursor: pointer; border-radius: 5px; font-weight: bold; border: 1px solid black;
+    }
+    @media all and (max-width: 450px){
+        input[type="submit"]{
+            padding: 10px; width: auto;
+        }
+    }
+
+    textarea{
+        max-width: 94%; border: 1px solid black; font-size: large; font-family: 'Times New Roman', Times, serif;
+    }
+
+    #txtarea {display:none;}
+    
+    
+</style>
+
+<script>
+    function changeStatus()
+    {
+        var status = document.getElementById("slct") ;
+        if(status.value == "Other")
+        {
+            document.getElementById("wow") .style.visibility="visible" ;
+        }
+        else
+        {
+            document.getElementById("wow") .style.visibility="hidden" ;
+        }
+    }
+
+</script>
+<body>
+    <div class="main">
+        <form action="" method="get">
+            <h1>Contact us</h1>
+
+            <h3>Kindly fill all the details</h3>
+            <hr>
+            <p>
+                Name: <br><input type="text" name="name" required placeholder="Rick Astley">
+            </p>
+            <p>
+                Email address: <input type="email" name="email" id="email" required placeholder="someone@gmail.com">
+            </p>
+            <p>
+                Reason for contacting: <select name="Reason" id="slct" required onchange="changeStatus()">
+                    <option value="">--Select an option--</option>
+                    <option value="work">Work</option>
+                    <option value="Other" >Other, specify below</option>
+
+                </select>
+                <textarea name="magic" id="wow" cols="150" rows="2"></textarea>
+            </p>
+            <p>
+                Message: <br><textarea name="message" id="message" cols="150" rows="7" required placeholder="Enter your message"></textarea>
+            </p>
+            <p><input type="submit" value="Submit"></p>
+
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{
+    margin: 0px 0px 0px; box-sizing: border-box;
+}
+
+
+
+header{
+    display: grid;
+}
+header h1{
+    grid-column-start: 1; grid-column-end: 6; background: linear-gradient(to right, #1269bb, #b6b5c2);
+    padding: 20px 40px; font-size: 50px; 
+    grid-row-start: 1; grid-row-end: 2; color: antiquewhite; font-family: cursive; animation: left 3s alternate both; 
+}
+@keyframes left{
+    0%{
+        left: 100px; color: #1269bb;
+    }
+    100%{
+        left: 0px; color: antiquewhite;
+    }
+}
+header img{
+    grid-column-start: 5; grid-column-end: 6; margin-top: 20px; border-radius: 50%; width: 170px; height: 170px; margin-right: -20px; margin-bottom: 20px;  grid-row-start: 1; grid-row-end: 2;animation: right 3s; 
+}
+@keyframes right{
+    0%{
+        right: 50px; opacity: 0%; 
+    }
+    100%{
+        right: 0px; opacity: 100%;
+    }
+}    
+
+
+
+nav{
+    background-color: black; overflow: hidden; padding: 1rem 2rem;
+}
+nav a{
+    color: blanchedalmond; text-align: center; text-decoration: none; padding: 10px;
+}
+nav a:hover{
+    color: rgb(255, 255, 255); background-color: #0b232d; border: 1px solid rgb(255, 255, 255); border-radius: 3px;
+}
+
+
+
+@media all and (min-width: 1000px) {
+    main{
+     display: grid; grid-template-columns: repeat(3,28rem);
+    }
+}
+@media all and (max-width:450px){
+    .child img{
+        height: 260px; width: 260px; 
+    }
+    nav a{
+        padding: 8px;
+    }
+    header img{
+        margin-right: 0px;
+    }
+}
+
+.child img{
+    max-height: 22rem; max-width: 22rem; 
+}
+.main {
+    max-width: 25rem; max-height: 38rem; margin: 2rem 2rem; padding: 1rem; border-radius: 3px; text-align: center; font: 2rem Verdana; box-shadow: 0 12px 20px black; 
+}
+
+
+
+
+footer{
+    background-color: rgba(0, 0, 0, 0.932); overflow: hidden; 
+}
+footer a{
+    text-decoration: none; color: wheat; padding: 10px; float: left;
+}
+.fa-twitter{
+    color: rgb(21, 161, 242);
+}
+.fa-linkedin{
+    color: white;
+}
+.fa-envelope{
+    color: rgb(224, 210, 22);
+}
+.copyright{
+    float: right; color: wheat; padding: 10px; 
+}

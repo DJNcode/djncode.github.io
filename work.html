@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+<style>
+    *{
+    margin: 0px 0px 0px; box-sizing: border-box;
+}
+
+
+header h1{
+    background: linear-gradient(to right, #b6b5c2, #1269bb);
+    padding: 6rem 3rem; font-size: 3rem;
+    color: antiquewhite; text-align: center;
+}
+
+nav{
+    background-color: black; overflow: hidden; padding: 1rem 2rem;
+}
+nav a{
+    color: blanchedalmond; text-align: center; text-decoration: none; padding: 10px;
+}
+nav a:hover{
+    color: rgb(255, 255, 255); background-color: #0b232d; border: 1px solid rgb(255, 255, 255); border-radius: 3px;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 10vh;
+}
+h2 span{
+    background: linear-gradient(to right, #37f5f5, #1269bb);
+  padding: 10px 55px;
+  border-radius: 20px;
+  color: antiquewhite;
+}
+
+.carousel {
+  max-width: 100%; animation: opacity 3s;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.carousel-cell {
+  width: 440px;
+  height: 430px;
+  margin: 0 15px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    nav a{
+        padding: 8px;
+    }
+    .carousel-cell img{
+        width: 350px;
+        height: 340px;
+    }
+    .carousel-cell {
+        width: 350px;
+        height: 340px;
+    }
+}
+
+.carousel-cell img{
+    height: 430px; width: 440px; object-fit: cover;
+}
+
+.space{
+    height: 5rem;
+}
+
+footer{
+    background-color: rgb(0, 0, 0); overflow: hidden; 
+}
+.copyright{
+    float: right; color: wheat; padding: 10px; 
+}
+</style>
+<body>
+    <header>
+       <h1></h1>
+   </header> 
+   
+   <nav>
+       <a href="Tanmoy.html">Home</a>
+       <a href="work.html">Work</a>
+       <a href="About.html">About</a>
+       <a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact us</a>
+   </nav>
+    <h2>
+        <span>Flyers </span>
+    </h2>
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell"><img src="fly1.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="fly2.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="fly3.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="fly4.jpg" alt=""></div>
+    </div>
+
+    <div class="space"></div>
+
+   
+    <h2> <span style="background: linear-gradient(to right, #340f8a, #1269bb);
+        padding: 10px 55px;
+        border-radius: 20px;
+        color: antiquewhite;">You will learn </span></h2>
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell"><img src="learn1.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="learn2.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="learn3.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="learn4.jpg" alt=""></div>
+    </div>
+    <div class="space"></div>
+    
+    
+    <footer>
+        <p class="copyright">&copy;2021 | Tanmoyjit Boruah</p>
+    </footer>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
