@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
     h1{
@@ -60,24 +61,10 @@
     
 </style>
 
-<script>
-    function changeStatus()
-    {
-        var status = document.getElementById("slct") ;
-        if(status.value == "Other")
-        {
-            document.getElementById("wow") .style.visibility="visible" ;
-        }
-        else
-        {
-            document.getElementById("wow") .style.visibility="hidden" ;
-        }
-    }
 
-</script>
 <body>
     <div class="main">
-        <form action="" method="get">
+        <form action="contact.php" method="post">
             <h1>Contact us</h1>
 
             <h3>Kindly fill all the details</h3>
@@ -89,13 +76,13 @@
                 Email address: <input type="email" name="email" id="email" required placeholder="someone@gmail.com">
             </p>
             <p>
-                Reason for contacting: <select name="Reason" id="slct" required onchange="changeStatus()">
+                Reason for contacting: <select name="Reason" id="slct" required>
                     <option value="">--Select an option--</option>
                     <option value="work">Work</option>
                     <option value="Other" >Other, specify below</option>
 
                 </select>
-                <textarea name="magic" id="wow" cols="150" rows="2"></textarea>
+                <textarea name="magic" id="txtarea" cols="150" rows="1.5"></textarea>
             </p>
             <p>
                 Message: <br><textarea name="message" id="message" cols="150" rows="7" required placeholder="Enter your message"></textarea>
@@ -105,5 +92,16 @@
         </form>
 
     </div>
+    <script>
+     $("#txtarea").hide();
+     $( "#slct" ).change(function() {
+      var val = $("#slct").val();
+     if(val=="Other"){
+        $("#txtarea").show();
+     } else {
+                $("#txtarea").hide();
+        }
+       });
+   </script>
 </body>
 </html>
