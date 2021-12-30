@@ -64,7 +64,7 @@
 
 <body>
     <div class="main">
-        <form action="contact.php" method="post">
+        <form action="https://formsubmit.co/tanmoyjitb@gmail.com" method="post">
             <h1>Contact us</h1>
 
             <h3>Kindly fill all the details</h3>
@@ -87,7 +87,7 @@
             <p>
                 Message: <br><textarea name="message" id="message" cols="150" rows="7" required placeholder="Enter your message"></textarea>
             </p>
-            <p><input type="submit" value="Submit"></p>
+            <p><input onclick="myFunction()" type="submit" value="Submit"></p>
 
         </form>
 
@@ -102,6 +102,9 @@
                 $("#txtarea").hide();
         }
        });
+         function myFunction() {
+          alert("Fak u bdw form submitted");
+        }
    </script>
 </body>
 </html>
