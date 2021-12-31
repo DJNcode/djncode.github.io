@@ -9,7 +9,7 @@ header{
 }
 header h1{
     grid-column-start: 1; grid-column-end: 6; background: linear-gradient(to right, #1269bb, #b6b5c2);
-    padding: 20px 40px; font-size: 50px; 
+    padding: 60px 40px 20px; font-size: 50px; 
     grid-row-start: 1; grid-row-end: 2; color: antiquewhite; font-family: cursive; animation: left 3s alternate both; 
 }
 @keyframes left{
@@ -62,7 +62,7 @@ nav a:hover{
         margin-right: 0px;
     }
     header h1{
-        margin-left:-10px;
+        margin-left:-10px; padding: 20px 40px;
     }
 }
 
